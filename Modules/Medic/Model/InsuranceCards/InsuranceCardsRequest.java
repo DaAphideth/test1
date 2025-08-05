@@ -1,0 +1,24 @@
+/*    */ package nencer.app.Modules.Medic.Model.InsuranceCards;
+/*    */ public class InsuranceCardsRequest { private int id;
+/*    */   private String insuranceCode;
+/*    */   private String benefitCode;
+/*    */   private String insuranceName;
+/*    */   private Integer benefitRate;
+/*    */   
+/*  8 */   public void setId(int id) { this.id = id; } public void setInsuranceCode(String insuranceCode) { this.insuranceCode = insuranceCode; } public void setBenefitCode(String benefitCode) { this.benefitCode = benefitCode; } public void setInsuranceName(String insuranceName) { this.insuranceName = insuranceName; } public void setBenefitRate(Integer benefitRate) { this.benefitRate = benefitRate; } public boolean equals(Object o) { if (o == this) return true;  if (!(o instanceof InsuranceCardsRequest)) return false;  InsuranceCardsRequest other = (InsuranceCardsRequest)o; if (!other.canEqual(this)) return false;  if (getId() != other.getId()) return false;  Object this$insuranceCode = getInsuranceCode(), other$insuranceCode = other.getInsuranceCode(); if ((this$insuranceCode == null) ? (other$insuranceCode != null) : !this$insuranceCode.equals(other$insuranceCode)) return false;  Object this$benefitCode = getBenefitCode(), other$benefitCode = other.getBenefitCode(); if ((this$benefitCode == null) ? (other$benefitCode != null) : !this$benefitCode.equals(other$benefitCode)) return false;  Object this$insuranceName = getInsuranceName(), other$insuranceName = other.getInsuranceName(); if ((this$insuranceName == null) ? (other$insuranceName != null) : !this$insuranceName.equals(other$insuranceName)) return false;  Object this$benefitRate = getBenefitRate(), other$benefitRate = other.getBenefitRate(); return !((this$benefitRate == null) ? (other$benefitRate != null) : !this$benefitRate.equals(other$benefitRate)); } protected boolean canEqual(Object other) { return other instanceof InsuranceCardsRequest; } public int hashCode() { int PRIME = 59; result = 1; result = result * 59 + getId(); Object $insuranceCode = getInsuranceCode(); result = result * 59 + (($insuranceCode == null) ? 43 : $insuranceCode.hashCode()); Object $benefitCode = getBenefitCode(); result = result * 59 + (($benefitCode == null) ? 43 : $benefitCode.hashCode()); Object $insuranceName = getInsuranceName(); result = result * 59 + (($insuranceName == null) ? 43 : $insuranceName.hashCode()); Object $benefitRate = getBenefitRate(); return result * 59 + (($benefitRate == null) ? 43 : $benefitRate.hashCode()); } public String toString() { return "InsuranceCardsRequest(id=" + getId() + ", insuranceCode=" + getInsuranceCode() + ", benefitCode=" + getBenefitCode() + ", insuranceName=" + getInsuranceName() + ", benefitRate=" + getBenefitRate() + ")"; } public InsuranceCardsRequest(int id, String insuranceCode, String benefitCode, String insuranceName, Integer benefitRate) {
+/*  9 */     this.id = id; this.insuranceCode = insuranceCode; this.benefitCode = benefitCode; this.insuranceName = insuranceName; this.benefitRate = benefitRate;
+/*    */   } public InsuranceCardsRequest() {}
+/* 11 */   public static InsuranceCardsRequestBuilder builder() { return new InsuranceCardsRequestBuilder(); } public static class InsuranceCardsRequestBuilder { private int id; private String insuranceCode; public InsuranceCardsRequestBuilder id(int id) { this.id = id; return this; } private String benefitCode; private String insuranceName; private Integer benefitRate; public InsuranceCardsRequestBuilder insuranceCode(String insuranceCode) { this.insuranceCode = insuranceCode; return this; } public InsuranceCardsRequestBuilder benefitCode(String benefitCode) { this.benefitCode = benefitCode; return this; } public InsuranceCardsRequestBuilder insuranceName(String insuranceName) { this.insuranceName = insuranceName; return this; } public InsuranceCardsRequestBuilder benefitRate(Integer benefitRate) { this.benefitRate = benefitRate; return this; } public InsuranceCardsRequest build() { return new InsuranceCardsRequest(this.id, this.insuranceCode, this.benefitCode, this.insuranceName, this.benefitRate); } public String toString() { return "InsuranceCardsRequest.InsuranceCardsRequestBuilder(id=" + this.id + ", insuranceCode=" + this.insuranceCode + ", benefitCode=" + this.benefitCode + ", insuranceName=" + this.insuranceName + ", benefitRate=" + this.benefitRate + ")"; }
+/*    */      }
+/* 13 */   public int getId() { return this.id; }
+/* 14 */   public String getInsuranceCode() { return this.insuranceCode; }
+/* 15 */   public String getBenefitCode() { return this.benefitCode; }
+/* 16 */   public String getInsuranceName() { return this.insuranceName; } public Integer getBenefitRate() {
+/* 17 */     return this.benefitRate;
+/*    */   } }
+
+
+/* Location:              C:\Users\Administrator\Desktop\!\nencer\app\Modules\Medic\Model\InsuranceCards\InsuranceCardsRequest.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       1.1.3
+ */

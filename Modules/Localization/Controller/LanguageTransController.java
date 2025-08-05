@@ -1,0 +1,202 @@
+/*     */ package nencer.app.Modules.Localization.Controller;
+/*     */ import java.util.Date;
+/*     */ import java.util.HashMap;
+/*     */ import java.util.Map;
+/*     */ import java.util.Optional;
+/*     */ import java.util.stream.Collectors;
+/*     */ import javax.validation.Valid;
+/*     */ import nencer.app.Modules.Localization.Entity.LanguagesTrans;
+/*     */ import nencer.app.Modules.Localization.Model.LanguageRequest;
+/*     */ import nencer.app.Modules.Localization.Model.LanguageTransRequest;
+/*     */ import nencer.app.Modules.Localization.Model.LanguageTransResponse;
+/*     */ import nencer.app.Utils.ApiError;
+/*     */ import nencer.app.Utils.ApiResponse;
+/*     */ import org.apache.commons.lang3.exception.ExceptionUtils;
+/*     */ import org.modelmapper.ModelMapper;
+/*     */ import org.slf4j.Logger;
+/*     */ import org.slf4j.LoggerFactory;
+/*     */ import org.springframework.beans.factory.annotation.Autowired;
+/*     */ import org.springframework.data.domain.Page;
+/*     */ import org.springframework.data.domain.PageRequest;
+/*     */ import org.springframework.data.domain.Pageable;
+/*     */ import org.springframework.web.bind.annotation.CrossOrigin;
+/*     */ import org.springframework.web.bind.annotation.GetMapping;
+/*     */ import org.springframework.web.bind.annotation.PathVariable;
+/*     */ import org.springframework.web.bind.annotation.PutMapping;
+/*     */ import org.springframework.web.bind.annotation.RequestBody;
+/*     */ import org.springframework.web.bind.annotation.RequestParam;
+/*     */ 
+/*     */ @RestController
+/*     */ @CrossOrigin(origins = {"*"}, allowedHeaders = {"*"})
+/*     */ @RequestMapping({"/api"})
+/*     */ public class LanguageTransController {
+/*  33 */   public static final Logger logger = LoggerFactory.getLogger(LanguageTransController.class);
+/*     */ 
+/*     */   
+/*     */   @Autowired
+/*     */   ApiError apiError;
+/*     */ 
+/*     */   
+/*     */   @Autowired
+/*     */   ModelMapper modelMapper;
+/*     */ 
+/*     */   
+/*     */   @Autowired
+/*     */   LanguageTransRepository languageTransRepository;
+/*     */ 
+/*     */ 
+/*     */   
+/*     */   @GetMapping({"/languagetrans"})
+/*     */   public ApiResponse getPaging(@RequestParam(required = false) String name, @RequestParam(required = false) String fieldSort, @RequestParam(required = false) String direction, @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
+/*  51 */     ApiResponse rs = new ApiResponse();
+/*  52 */     Map<String, Object> data = new HashMap<>();
+/*     */     try {
+/*  54 */       int p = 1;
+/*  55 */       int s = 10;
+/*     */       try {
+/*  57 */         p = (page <= 0) ? 1 : page;
+/*  58 */         s = (size <= 0) ? 10 : size;
+/*  59 */       } catch (Exception exception) {}
+/*     */ 
+/*     */ 
+/*     */       
+/*  63 */       PageRequest pageRequest = PageRequest.of(p - 1, s);
+/*     */       
+/*  65 */       Page<LanguagesTrans> pages = this.languageTransRepository.findAll((Pageable)pageRequest);
+/*  66 */       data.put("languages", pages.stream().map(m -> (LanguageTransRequest)this.modelMapper.map(m, LanguageTransRequest.class)).collect(Collectors.toList()));
+/*  67 */       data.put("totalItems", Long.valueOf(pages.getTotalElements()));
+/*  68 */       data.put("totalPages", Integer.valueOf(pages.getTotalPages()));
+/*     */       
+/*  70 */       rs.put("status", "OK");
+/*  71 */       rs.put("responseCode", "00");
+/*  72 */       rs.put("data", data);
+/*     */     }
+/*  74 */     catch (Exception e) {
+/*  75 */       String exceptionAsString = ExceptionUtils.getStackTrace(e);
+/*  76 */       logger.error(exceptionAsString);
+/*  77 */       return this.apiError.getError("999", new String[] { exceptionAsString });
+/*     */     } 
+/*  79 */     return rs;
+/*     */   }
+/*     */ 
+/*     */   
+/*     */   @GetMapping({"/languagetrans/{id}"})
+/*     */   public ApiResponse getById(@PathVariable @Valid Integer id) {
+/*  85 */     ApiResponse rs = new ApiResponse();
+/*  86 */     Map<String, Object> data = new HashMap<>();
+/*     */     
+/*     */     try {
+/*  89 */       if (id == null) {
+/*  90 */         return this.apiError.getError("02");
+/*     */       }
+/*     */       
+/*  93 */       Optional<LanguagesTrans> g = this.languageTransRepository.findById(id);
+/*  94 */       if (!g.isPresent()) {
+/*  95 */         return this.apiError.getError("02");
+/*     */       }
+/*     */       
+/*  98 */       rs.put("status", "OK");
+/*  99 */       rs.put("responseCode", "00");
+/* 100 */       rs.put("data", this.modelMapper.map(g.get(), LanguageTransResponse.class));
+/*     */     }
+/* 102 */     catch (Exception e) {
+/* 103 */       String exceptionAsString = ExceptionUtils.getStackTrace(e);
+/* 104 */       logger.error(exceptionAsString);
+/* 105 */       return this.apiError.getError("999", new String[] { exceptionAsString });
+/*     */     } 
+/* 107 */     return rs;
+/*     */   }
+/*     */   
+/*     */   @PostMapping({"/languagetrans/create"})
+/*     */   public ApiResponse create(@Valid @RequestBody LanguageRequest request) {
+/* 112 */     ApiResponse rs = new ApiResponse();
+/* 113 */     Map<String, Object> data = new HashMap<>();
+/*     */     
+/*     */     try {
+/* 116 */       LanguagesTrans languagesTrans = (LanguagesTrans)this.modelMapper.map(request, LanguagesTrans.class);
+/* 117 */       languagesTrans.setCreatedAt(new Date());
+/* 118 */       LanguagesTrans result = (LanguagesTrans)this.languageTransRepository.saveAndFlush(languagesTrans);
+/*     */       
+/* 120 */       data.put("id", Integer.valueOf(result.getId()));
+/*     */       
+/* 122 */       rs.put("status", "OK");
+/* 123 */       rs.put("responseCode", "00");
+/* 124 */       rs.put("data", data);
+/*     */     }
+/* 126 */     catch (Exception e) {
+/* 127 */       String exceptionAsString = ExceptionUtils.getStackTrace(e);
+/* 128 */       logger.error(exceptionAsString);
+/* 129 */       return this.apiError.getError("999", new String[] { exceptionAsString });
+/*     */     } 
+/* 131 */     return rs;
+/*     */   }
+/*     */   
+/*     */   @PutMapping({"/languagetrans/edit/{id}"})
+/*     */   public ApiResponse edit(@PathVariable @Valid Integer id, @Valid @RequestBody LanguageTransRequest request) {
+/* 136 */     ApiResponse rs = new ApiResponse();
+/* 137 */     Map<String, Object> data = new HashMap<>();
+/*     */     
+/*     */     try {
+/* 140 */       if (id == null) {
+/* 141 */         return this.apiError.getError("02");
+/*     */       }
+/*     */       
+/* 144 */       Optional<LanguagesTrans> g = this.languageTransRepository.findById(id);
+/* 145 */       if (!g.isPresent()) {
+/* 146 */         return this.apiError.getError("02");
+/*     */       }
+/*     */       
+/* 149 */       LanguagesTrans languagesTrans = (LanguagesTrans)this.modelMapper.map(request, LanguagesTrans.class);
+/* 150 */       languagesTrans.setId(id.intValue());
+/*     */ 
+/*     */       
+/* 153 */       this.languageTransRepository.saveAndFlush(languagesTrans);
+/*     */       
+/* 155 */       rs.put("status", "OK");
+/* 156 */       rs.put("responseCode", "00");
+/* 157 */       rs.put("data", data);
+/*     */     }
+/* 159 */     catch (Exception e) {
+/* 160 */       String exceptionAsString = ExceptionUtils.getStackTrace(e);
+/* 161 */       logger.error(exceptionAsString);
+/* 162 */       return this.apiError.getError("999", new String[] { exceptionAsString });
+/*     */     } 
+/* 164 */     return rs;
+/*     */   }
+/*     */   
+/*     */   @DeleteMapping({"/languagetrans/delete/{id}"})
+/*     */   public ApiResponse delete(@PathVariable @Valid Integer id) {
+/* 169 */     ApiResponse rs = new ApiResponse();
+/* 170 */     Map<String, Object> data = new HashMap<>();
+/*     */     
+/*     */     try {
+/* 173 */       if (id == null) {
+/* 174 */         return this.apiError.getError("02");
+/*     */       }
+/*     */       
+/* 177 */       Optional<LanguagesTrans> g = this.languageTransRepository.findById(id);
+/* 178 */       if (!g.isPresent()) {
+/* 179 */         return this.apiError.getError("02");
+/*     */       }
+/*     */ 
+/*     */       
+/* 183 */       this.languageTransRepository.delete(g.get());
+/*     */       
+/* 185 */       rs.put("status", "OK");
+/* 186 */       rs.put("responseCode", "00");
+/* 187 */       rs.put("data", data);
+/*     */     }
+/* 189 */     catch (Exception e) {
+/* 190 */       String exceptionAsString = ExceptionUtils.getStackTrace(e);
+/* 191 */       logger.error(exceptionAsString);
+/* 192 */       return this.apiError.getError("999", new String[] { exceptionAsString });
+/*     */     } 
+/* 194 */     return rs;
+/*     */   }
+/*     */ }
+
+
+/* Location:              C:\Users\Administrator\Desktop\!\nencer\app\Modules\Localization\Controller\LanguageTransController.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       1.1.3
+ */

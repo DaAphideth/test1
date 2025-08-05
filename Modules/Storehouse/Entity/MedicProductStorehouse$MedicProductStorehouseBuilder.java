@@ -1,0 +1,22 @@
+/*    */ package nencer.app.Modules.Storehouse.Entity;
+/*    */ 
+/*    */ public class MedicProductStorehouseBuilder {
+/*    */   private Integer id;
+/*    */   private String code;
+/*    */   private String name;
+/*    */   private String address;
+/*    */   private String contactPhone;
+/*    */   private String contactEmail;
+/*    */   private String description;
+/*    */   private Integer status;
+/*    */   private String creatorId;
+/*    */   
+/* 14 */   public MedicProductStorehouseBuilder id(Integer id) { this.id = id; return this; } private String updaterId; private Date createdAt; private Date updatedAt; private String shType; private String orderTypeArray; private Integer isCashier; private Integer departmentId; private String allowRoomTreatmentId; private String allowUsers; private Integer totalRecord; public MedicProductStorehouseBuilder code(String code) { this.code = code; return this; } public MedicProductStorehouseBuilder name(String name) { this.name = name; return this; } public MedicProductStorehouseBuilder address(String address) { this.address = address; return this; } public MedicProductStorehouseBuilder contactPhone(String contactPhone) { this.contactPhone = contactPhone; return this; } public MedicProductStorehouseBuilder contactEmail(String contactEmail) { this.contactEmail = contactEmail; return this; } public MedicProductStorehouseBuilder description(String description) { this.description = description; return this; } public MedicProductStorehouseBuilder status(Integer status) { this.status = status; return this; } public MedicProductStorehouseBuilder creatorId(String creatorId) { this.creatorId = creatorId; return this; } public MedicProductStorehouseBuilder updaterId(String updaterId) { this.updaterId = updaterId; return this; } public MedicProductStorehouseBuilder createdAt(Date createdAt) { this.createdAt = createdAt; return this; } public MedicProductStorehouseBuilder updatedAt(Date updatedAt) { this.updatedAt = updatedAt; return this; } public MedicProductStorehouseBuilder shType(String shType) { this.shType = shType; return this; } public MedicProductStorehouseBuilder orderTypeArray(String orderTypeArray) { this.orderTypeArray = orderTypeArray; return this; } public MedicProductStorehouseBuilder isCashier(Integer isCashier) { this.isCashier = isCashier; return this; } public MedicProductStorehouseBuilder departmentId(Integer departmentId) { this.departmentId = departmentId; return this; } public MedicProductStorehouseBuilder allowRoomTreatmentId(String allowRoomTreatmentId) { this.allowRoomTreatmentId = allowRoomTreatmentId; return this; } public MedicProductStorehouseBuilder allowUsers(String allowUsers) { this.allowUsers = allowUsers; return this; } public MedicProductStorehouseBuilder totalRecord(Integer totalRecord) { this.totalRecord = totalRecord; return this; } public MedicProductStorehouse build() { return new MedicProductStorehouse(this.id, this.code, this.name, this.address, this.contactPhone, this.contactEmail, this.description, this.status, this.creatorId, this.updaterId, this.createdAt, this.updatedAt, this.shType, this.orderTypeArray, this.isCashier, this.departmentId, this.allowRoomTreatmentId, this.allowUsers, this.totalRecord); } public String toString() { return "MedicProductStorehouse.MedicProductStorehouseBuilder(id=" + this.id + ", code=" + this.code + ", name=" + this.name + ", address=" + this.address + ", contactPhone=" + this.contactPhone + ", contactEmail=" + this.contactEmail + ", description=" + this.description + ", status=" + this.status + ", creatorId=" + this.creatorId + ", updaterId=" + this.updaterId + ", createdAt=" + this.createdAt + ", updatedAt=" + this.updatedAt + ", shType=" + this.shType + ", orderTypeArray=" + this.orderTypeArray + ", isCashier=" + this.isCashier + ", departmentId=" + this.departmentId + ", allowRoomTreatmentId=" + this.allowRoomTreatmentId + ", allowUsers=" + this.allowUsers + ", totalRecord=" + this.totalRecord + ")"; }
+/*    */ 
+/*    */ }
+
+
+/* Location:              C:\Users\Administrator\Desktop\!\nencer\app\Modules\Storehouse\Entity\MedicProductStorehouse$MedicProductStorehouseBuilder.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       1.1.3
+ */

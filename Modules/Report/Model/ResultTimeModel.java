@@ -1,0 +1,27 @@
+/*    */ package nencer.app.Modules.Report.Model;
+/*    */ @JsonIgnoreProperties(ignoreUnknown = true)
+/*    */ public class ResultTimeModel { private String name;
+/*    */   private Date roomSampleDate;
+/*    */   private String defaultValue;
+/*    */   private String roomName;
+/*    */   
+/*  8 */   public void setName(String name) { this.name = name; } private String roomNumber; private String patientId; private String gender; private String yearBorn; private String barCode; public void setRoomSampleDate(Date roomSampleDate) { this.roomSampleDate = roomSampleDate; } public void setDefaultValue(String defaultValue) { this.defaultValue = defaultValue; } public void setRoomName(String roomName) { this.roomName = roomName; } public void setRoomNumber(String roomNumber) { this.roomNumber = roomNumber; } public void setPatientId(String patientId) { this.patientId = patientId; } public void setGender(String gender) { this.gender = gender; } public void setYearBorn(String yearBorn) { this.yearBorn = yearBorn; } public void setBarCode(String barCode) { this.barCode = barCode; } public boolean equals(Object o) { if (o == this) return true;  if (!(o instanceof ResultTimeModel)) return false;  ResultTimeModel other = (ResultTimeModel)o; if (!other.canEqual(this)) return false;  Object this$name = getName(), other$name = other.getName(); if ((this$name == null) ? (other$name != null) : !this$name.equals(other$name)) return false;  Object this$roomSampleDate = getRoomSampleDate(), other$roomSampleDate = other.getRoomSampleDate(); if ((this$roomSampleDate == null) ? (other$roomSampleDate != null) : !this$roomSampleDate.equals(other$roomSampleDate)) return false;  Object this$defaultValue = getDefaultValue(), other$defaultValue = other.getDefaultValue(); if ((this$defaultValue == null) ? (other$defaultValue != null) : !this$defaultValue.equals(other$defaultValue)) return false;  Object this$roomName = getRoomName(), other$roomName = other.getRoomName(); if ((this$roomName == null) ? (other$roomName != null) : !this$roomName.equals(other$roomName)) return false;  Object this$roomNumber = getRoomNumber(), other$roomNumber = other.getRoomNumber(); if ((this$roomNumber == null) ? (other$roomNumber != null) : !this$roomNumber.equals(other$roomNumber)) return false;  Object this$patientId = getPatientId(), other$patientId = other.getPatientId(); if ((this$patientId == null) ? (other$patientId != null) : !this$patientId.equals(other$patientId)) return false;  Object this$gender = getGender(), other$gender = other.getGender(); if ((this$gender == null) ? (other$gender != null) : !this$gender.equals(other$gender)) return false;  Object this$yearBorn = getYearBorn(), other$yearBorn = other.getYearBorn(); if ((this$yearBorn == null) ? (other$yearBorn != null) : !this$yearBorn.equals(other$yearBorn)) return false;  Object this$barCode = getBarCode(), other$barCode = other.getBarCode(); return !((this$barCode == null) ? (other$barCode != null) : !this$barCode.equals(other$barCode)); } protected boolean canEqual(Object other) { return other instanceof ResultTimeModel; } public int hashCode() { int PRIME = 59; result = 1; Object $name = getName(); result = result * 59 + (($name == null) ? 43 : $name.hashCode()); Object $roomSampleDate = getRoomSampleDate(); result = result * 59 + (($roomSampleDate == null) ? 43 : $roomSampleDate.hashCode()); Object $defaultValue = getDefaultValue(); result = result * 59 + (($defaultValue == null) ? 43 : $defaultValue.hashCode()); Object $roomName = getRoomName(); result = result * 59 + (($roomName == null) ? 43 : $roomName.hashCode()); Object $roomNumber = getRoomNumber(); result = result * 59 + (($roomNumber == null) ? 43 : $roomNumber.hashCode()); Object $patientId = getPatientId(); result = result * 59 + (($patientId == null) ? 43 : $patientId.hashCode()); Object $gender = getGender(); result = result * 59 + (($gender == null) ? 43 : $gender.hashCode()); Object $yearBorn = getYearBorn(); result = result * 59 + (($yearBorn == null) ? 43 : $yearBorn.hashCode()); Object $barCode = getBarCode(); return result * 59 + (($barCode == null) ? 43 : $barCode.hashCode()); } public String toString() { return "ResultTimeModel(name=" + getName() + ", roomSampleDate=" + getRoomSampleDate() + ", defaultValue=" + getDefaultValue() + ", roomName=" + getRoomName() + ", roomNumber=" + getRoomNumber() + ", patientId=" + getPatientId() + ", gender=" + getGender() + ", yearBorn=" + getYearBorn() + ", barCode=" + getBarCode() + ")"; }
+/*    */ 
+/*    */   
+/* 11 */   public String getName() { return this.name; }
+/* 12 */   public Date getRoomSampleDate() { return this.roomSampleDate; }
+/* 13 */   public String getDefaultValue() { return this.defaultValue; }
+/* 14 */   public String getRoomName() { return this.roomName; } public String getRoomNumber() {
+/* 15 */     return this.roomNumber;
+/*    */   }
+/* 17 */   public String getPatientId() { return this.patientId; }
+/* 18 */   public String getGender() { return this.gender; }
+/* 19 */   public String getYearBorn() { return this.yearBorn; } public String getBarCode() {
+/* 20 */     return this.barCode;
+/*    */   } }
+
+
+/* Location:              C:\Users\Administrator\Desktop\!\nencer\app\Modules\Report\Model\ResultTimeModel.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       1.1.3
+ */

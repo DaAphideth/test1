@@ -1,0 +1,34 @@
+/*    */ package nencer.app.Modules.Medic.Model.PrescriptionCeiling;
+/*    */ public class PrescriptionCeilingResponse { private int id;
+/*    */   private String diagnosticCode;
+/*    */   private String diagnosticName;
+/*    */   private String healthInsuranceCeiling;
+/*    */   private String ceilingTotalExpenditure;
+/*    */   
+/*  8 */   public void setId(int id) { this.id = id; } private Date createdAt; private Date updatedAt; private Integer totalRecord; private String createdAtDis; private String updatedAtDis; public void setDiagnosticCode(String diagnosticCode) { this.diagnosticCode = diagnosticCode; } public void setDiagnosticName(String diagnosticName) { this.diagnosticName = diagnosticName; } public void setHealthInsuranceCeiling(String healthInsuranceCeiling) { this.healthInsuranceCeiling = healthInsuranceCeiling; } public void setCeilingTotalExpenditure(String ceilingTotalExpenditure) { this.ceilingTotalExpenditure = ceilingTotalExpenditure; } public void setCreatedAt(Date createdAt) { this.createdAt = createdAt; } public void setUpdatedAt(Date updatedAt) { this.updatedAt = updatedAt; } public void setTotalRecord(Integer totalRecord) { this.totalRecord = totalRecord; } public void setCreatedAtDis(String createdAtDis) { this.createdAtDis = createdAtDis; } public void setUpdatedAtDis(String updatedAtDis) { this.updatedAtDis = updatedAtDis; } public boolean equals(Object o) { if (o == this) return true;  if (!(o instanceof PrescriptionCeilingResponse)) return false;  PrescriptionCeilingResponse other = (PrescriptionCeilingResponse)o; if (!other.canEqual(this)) return false;  if (getId() != other.getId()) return false;  Object this$diagnosticCode = getDiagnosticCode(), other$diagnosticCode = other.getDiagnosticCode(); if ((this$diagnosticCode == null) ? (other$diagnosticCode != null) : !this$diagnosticCode.equals(other$diagnosticCode)) return false;  Object this$diagnosticName = getDiagnosticName(), other$diagnosticName = other.getDiagnosticName(); if ((this$diagnosticName == null) ? (other$diagnosticName != null) : !this$diagnosticName.equals(other$diagnosticName)) return false;  Object this$healthInsuranceCeiling = getHealthInsuranceCeiling(), other$healthInsuranceCeiling = other.getHealthInsuranceCeiling(); if ((this$healthInsuranceCeiling == null) ? (other$healthInsuranceCeiling != null) : !this$healthInsuranceCeiling.equals(other$healthInsuranceCeiling)) return false;  Object this$ceilingTotalExpenditure = getCeilingTotalExpenditure(), other$ceilingTotalExpenditure = other.getCeilingTotalExpenditure(); if ((this$ceilingTotalExpenditure == null) ? (other$ceilingTotalExpenditure != null) : !this$ceilingTotalExpenditure.equals(other$ceilingTotalExpenditure)) return false;  Object this$createdAt = getCreatedAt(), other$createdAt = other.getCreatedAt(); if ((this$createdAt == null) ? (other$createdAt != null) : !this$createdAt.equals(other$createdAt)) return false;  Object this$updatedAt = getUpdatedAt(), other$updatedAt = other.getUpdatedAt(); if ((this$updatedAt == null) ? (other$updatedAt != null) : !this$updatedAt.equals(other$updatedAt)) return false;  Object this$totalRecord = getTotalRecord(), other$totalRecord = other.getTotalRecord(); if ((this$totalRecord == null) ? (other$totalRecord != null) : !this$totalRecord.equals(other$totalRecord)) return false;  Object this$createdAtDis = getCreatedAtDis(), other$createdAtDis = other.getCreatedAtDis(); if ((this$createdAtDis == null) ? (other$createdAtDis != null) : !this$createdAtDis.equals(other$createdAtDis)) return false;  Object this$updatedAtDis = getUpdatedAtDis(), other$updatedAtDis = other.getUpdatedAtDis(); return !((this$updatedAtDis == null) ? (other$updatedAtDis != null) : !this$updatedAtDis.equals(other$updatedAtDis)); } protected boolean canEqual(Object other) { return other instanceof PrescriptionCeilingResponse; } public int hashCode() { int PRIME = 59; result = 1; result = result * 59 + getId(); Object $diagnosticCode = getDiagnosticCode(); result = result * 59 + (($diagnosticCode == null) ? 43 : $diagnosticCode.hashCode()); Object $diagnosticName = getDiagnosticName(); result = result * 59 + (($diagnosticName == null) ? 43 : $diagnosticName.hashCode()); Object $healthInsuranceCeiling = getHealthInsuranceCeiling(); result = result * 59 + (($healthInsuranceCeiling == null) ? 43 : $healthInsuranceCeiling.hashCode()); Object $ceilingTotalExpenditure = getCeilingTotalExpenditure(); result = result * 59 + (($ceilingTotalExpenditure == null) ? 43 : $ceilingTotalExpenditure.hashCode()); Object $createdAt = getCreatedAt(); result = result * 59 + (($createdAt == null) ? 43 : $createdAt.hashCode()); Object $updatedAt = getUpdatedAt(); result = result * 59 + (($updatedAt == null) ? 43 : $updatedAt.hashCode()); Object $totalRecord = getTotalRecord(); result = result * 59 + (($totalRecord == null) ? 43 : $totalRecord.hashCode()); Object $createdAtDis = getCreatedAtDis(); result = result * 59 + (($createdAtDis == null) ? 43 : $createdAtDis.hashCode()); Object $updatedAtDis = getUpdatedAtDis(); return result * 59 + (($updatedAtDis == null) ? 43 : $updatedAtDis.hashCode()); } public String toString() { return "PrescriptionCeilingResponse(id=" + getId() + ", diagnosticCode=" + getDiagnosticCode() + ", diagnosticName=" + getDiagnosticName() + ", healthInsuranceCeiling=" + getHealthInsuranceCeiling() + ", ceilingTotalExpenditure=" + getCeilingTotalExpenditure() + ", createdAt=" + getCreatedAt() + ", updatedAt=" + getUpdatedAt() + ", totalRecord=" + getTotalRecord() + ", createdAtDis=" + getCreatedAtDis() + ", updatedAtDis=" + getUpdatedAtDis() + ")"; }
+/*    */   
+/* 10 */   public int getId() { return this.id; }
+/* 11 */   public String getDiagnosticCode() { return this.diagnosticCode; }
+/* 12 */   public String getDiagnosticName() { return this.diagnosticName; }
+/* 13 */   public String getHealthInsuranceCeiling() { return this.healthInsuranceCeiling; }
+/* 14 */   public String getCeilingTotalExpenditure() { return this.ceilingTotalExpenditure; }
+/* 15 */   public Date getCreatedAt() { return this.createdAt; }
+/* 16 */   public Date getUpdatedAt() { return this.updatedAt; } public Integer getTotalRecord() {
+/* 17 */     return this.totalRecord;
+/*    */   }
+/*    */   
+/*    */   public String getUpdatedAtDis() {
+/* 21 */     if (this.updatedAt == null) return ""; 
+/* 22 */     return ApiHelper.dateToString(this.updatedAt);
+/*    */   }
+/*    */   
+/*    */   public String getCreatedAtDis() {
+/* 26 */     if (this.createdAt == null) return ""; 
+/* 27 */     return ApiHelper.dateToString(this.createdAt);
+/*    */   } }
+
+
+/* Location:              C:\Users\Administrator\Desktop\!\nencer\app\Modules\Medic\Model\PrescriptionCeiling\PrescriptionCeilingResponse.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       1.1.3
+ */

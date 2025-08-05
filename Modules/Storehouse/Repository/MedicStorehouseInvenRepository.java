@@ -1,0 +1,29 @@
+package nencer.app.Modules.Storehouse.Repository;
+
+import java.util.Optional;
+import nencer.app.Modules.Storehouse.Entity.MedicProductOrderDetail;
+import nencer.app.Modules.Storehouse.Entity.MedicStorehouseInven;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface MedicStorehouseInvenRepository extends JpaRepository<MedicStorehouseInven, Integer>, JpaSpecificationExecutor<MedicStorehouseInven> {
+  Optional<MedicStorehouseInven> findByInvenId(Integer paramInteger);
+  
+  Optional<MedicStorehouseInven> findByInvenIdAndStorehouseId(Integer paramInteger1, Integer paramInteger2);
+  
+  @Query("select u from MedicStorehouseInven u where u.storehouseId = :storehouseId and u.productId = :#{#medicProductOrderDetail.productId} and (u.priceInput = :#{#medicProductOrderDetail.priceInput} or (u.priceInput is null and :#{#medicProductOrderDetail.priceInput} is null)) and u.price = :#{#medicProductOrderDetail.price} and (u.priceIns = :#{#medicProductOrderDetail.priceIns} or (u.priceIns is null and :#{#medicProductOrderDetail.priceIns} is null)) and (u.priceFee = :#{#medicProductOrderDetail.priceFee} or (u.priceFee is null and :#{#medicProductOrderDetail.priceFee} is null)) and (u.priceHospital = :#{#medicProductOrderDetail.priceHospital} or (u.priceHospital is null and :#{#medicProductOrderDetail.priceHospital} is null)) and (u.priceRequest = :#{#medicProductOrderDetail.priceRequest} or (u.priceRequest is null and :#{#medicProductOrderDetail.priceRequest} is null)) and (u.priceSelling = :#{#medicProductOrderDetail.priceSelling} or (u.priceSelling is null and :#{#medicProductOrderDetail.priceSelling} is null)) and (u.batchNumber = :#{#medicProductOrderDetail.batchNumber} or (u.batchNumber is null and :#{#medicProductOrderDetail.batchNumber} is null)) and (u.vat = :#{#medicProductOrderDetail.vat} or (u.vat is null and :#{#medicProductOrderDetail.vat} is null)) and (u.bidNumber = :#{#medicProductOrderDetail.bidNumber} or (u.bidNumber is null and :#{#medicProductOrderDetail.bidNumber} is null)) and (u.bidGroup = :#{#medicProductOrderDetail.bidGroup} or (u.bidGroup is null and :#{#medicProductOrderDetail.bidGroup} is null)) and (u.bidPackage = :#{#medicProductOrderDetail.bidPackage} or (u.bidPackage is null and :#{#medicProductOrderDetail.bidPackage} is null)) and (u.bidYear = :#{#medicProductOrderDetail.bidYear} or (u.bidYear is null and :#{#medicProductOrderDetail.bidYear} is null)) and (u.expirationDate = :#{#medicProductOrderDetail.expirationDate} or (u.expirationDate is null and :#{#medicProductOrderDetail.expirationDate} is null)) and (u.productionDate = :#{#medicProductOrderDetail.productionDate} or (u.productionDate is null and :#{#medicProductOrderDetail.productionDate} is null)) ")
+  Optional<MedicStorehouseInven> findByUniqueConstraint(@Param("storehouseId") Integer paramInteger, @Param("medicProductOrderDetail") MedicProductOrderDetail paramMedicProductOrderDetail);
+  
+  @Query("select u from MedicStorehouseInven u where u.storehouseId = :storehouseId and u.productId = :#{#medicStorehouseInven.productId} and (u.priceInput = :#{#medicStorehouseInven.priceInput} or (u.priceInput is null and :#{#medicStorehouseInven.priceInput} is null)) and u.price = :#{#medicStorehouseInven.price} and (u.priceIns = :#{#medicStorehouseInven.priceIns} or (u.priceIns is null and :#{#medicStorehouseInven.priceIns} is null)) and (u.priceFee = :#{#medicStorehouseInven.priceFee} or (u.priceFee is null and :#{#medicStorehouseInven.priceFee} is null)) and (u.priceHospital = :#{#medicStorehouseInven.priceHospital} or (u.priceHospital is null and :#{#medicStorehouseInven.priceHospital} is null)) and (u.priceRequest = :#{#medicStorehouseInven.priceRequest} or (u.priceRequest is null and :#{#medicStorehouseInven.priceRequest} is null)) and (u.priceSelling = :#{#medicStorehouseInven.priceSelling} or (u.priceSelling is null and :#{#medicStorehouseInven.priceSelling} is null)) and (u.batchNumber = :#{#medicStorehouseInven.batchNumber} or (u.batchNumber is null and :#{#medicStorehouseInven.batchNumber} is null)) and (u.vat = :#{#medicStorehouseInven.vat} or (u.vat is null and :#{#medicStorehouseInven.vat} is null)) and (u.bidNumber = :#{#medicStorehouseInven.bidNumber} or (u.bidNumber is null and :#{#medicStorehouseInven.bidNumber} is null)) and (u.bidGroup = :#{#medicStorehouseInven.bidGroup} or (u.bidGroup is null and :#{#medicStorehouseInven.bidGroup} is null)) and (u.bidPackage = :#{#medicStorehouseInven.bidPackage} or (u.bidPackage is null and :#{#medicStorehouseInven.bidPackage} is null)) and (u.bidYear = :#{#medicStorehouseInven.bidYear} or (u.bidYear is null and :#{#medicStorehouseInven.bidYear} is null)) and (u.expirationDate = :#{#medicStorehouseInven.expirationDate} or (u.expirationDate is null and :#{#medicStorehouseInven.expirationDate} is null)) and (u.productionDate = :#{#medicStorehouseInven.productionDate} or (u.productionDate is null and :#{#medicStorehouseInven.productionDate} is null)) ")
+  Optional<MedicStorehouseInven> findByStorehouseIdAndUniqueConstraint(@Param("storehouseId") Integer paramInteger, @Param("medicStorehouseInven") MedicStorehouseInven paramMedicStorehouseInven);
+}
+
+
+/* Location:              C:\Users\Administrator\Desktop\!\nencer\app\Modules\Storehouse\Repository\MedicStorehouseInvenRepository.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       1.1.3
+ */

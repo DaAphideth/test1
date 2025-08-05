@@ -1,0 +1,17 @@
+/*    */ package nencer.app.Modules.Medic.Model.PrescriptionCeiling;
+/*    */ public class PrescriptionCeilingRequest { private int id;
+/*    */   private String diagnosticCode;
+/*    */   
+/*  5 */   public void setId(int id) { this.id = id; } private String healthInsuranceCeiling; private String ceilingTotalExpenditure; public void setDiagnosticCode(String diagnosticCode) { this.diagnosticCode = diagnosticCode; } public void setHealthInsuranceCeiling(String healthInsuranceCeiling) { this.healthInsuranceCeiling = healthInsuranceCeiling; } public void setCeilingTotalExpenditure(String ceilingTotalExpenditure) { this.ceilingTotalExpenditure = ceilingTotalExpenditure; } public boolean equals(Object o) { if (o == this) return true;  if (!(o instanceof PrescriptionCeilingRequest)) return false;  PrescriptionCeilingRequest other = (PrescriptionCeilingRequest)o; if (!other.canEqual(this)) return false;  if (getId() != other.getId()) return false;  Object this$diagnosticCode = getDiagnosticCode(), other$diagnosticCode = other.getDiagnosticCode(); if ((this$diagnosticCode == null) ? (other$diagnosticCode != null) : !this$diagnosticCode.equals(other$diagnosticCode)) return false;  Object this$healthInsuranceCeiling = getHealthInsuranceCeiling(), other$healthInsuranceCeiling = other.getHealthInsuranceCeiling(); if ((this$healthInsuranceCeiling == null) ? (other$healthInsuranceCeiling != null) : !this$healthInsuranceCeiling.equals(other$healthInsuranceCeiling)) return false;  Object this$ceilingTotalExpenditure = getCeilingTotalExpenditure(), other$ceilingTotalExpenditure = other.getCeilingTotalExpenditure(); return !((this$ceilingTotalExpenditure == null) ? (other$ceilingTotalExpenditure != null) : !this$ceilingTotalExpenditure.equals(other$ceilingTotalExpenditure)); } protected boolean canEqual(Object other) { return other instanceof PrescriptionCeilingRequest; } public int hashCode() { int PRIME = 59; result = 1; result = result * 59 + getId(); Object $diagnosticCode = getDiagnosticCode(); result = result * 59 + (($diagnosticCode == null) ? 43 : $diagnosticCode.hashCode()); Object $healthInsuranceCeiling = getHealthInsuranceCeiling(); result = result * 59 + (($healthInsuranceCeiling == null) ? 43 : $healthInsuranceCeiling.hashCode()); Object $ceilingTotalExpenditure = getCeilingTotalExpenditure(); return result * 59 + (($ceilingTotalExpenditure == null) ? 43 : $ceilingTotalExpenditure.hashCode()); } public String toString() { return "PrescriptionCeilingRequest(id=" + getId() + ", diagnosticCode=" + getDiagnosticCode() + ", healthInsuranceCeiling=" + getHealthInsuranceCeiling() + ", ceilingTotalExpenditure=" + getCeilingTotalExpenditure() + ")"; }
+/*    */   
+/*  7 */   public int getId() { return this.id; }
+/*  8 */   public String getDiagnosticCode() { return this.diagnosticCode; }
+/*  9 */   public String getHealthInsuranceCeiling() { return this.healthInsuranceCeiling; } public String getCeilingTotalExpenditure() {
+/* 10 */     return this.ceilingTotalExpenditure;
+/*    */   } }
+
+
+/* Location:              C:\Users\Administrator\Desktop\!\nencer\app\Modules\Medic\Model\PrescriptionCeiling\PrescriptionCeilingRequest.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       1.1.3
+ */

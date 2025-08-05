@@ -1,0 +1,43 @@
+/*    */ package nencer.app.Modules.Medic.Model.Room;public class RoomNumberResponse { private int id; private String name; private String number;
+/*    */   private int roomId;
+/*    */   private String note;
+/*    */   private String allowUsers;
+/*    */   private Integer status;
+/*    */   private Date createdAt;
+/*    */   private Date updatedAt;
+/*    */   private String updatedAtDis;
+/*    */   private String createdAtDis;
+/*    */   
+/* 11 */   public void setId(int id) { this.id = id; } public void setName(String name) { this.name = name; } public void setNumber(String number) { this.number = number; } public void setRoomId(int roomId) { this.roomId = roomId; } public void setNote(String note) { this.note = note; } public void setAllowUsers(String allowUsers) { this.allowUsers = allowUsers; } public void setStatus(Integer status) { this.status = status; } public void setCreatedAt(Date createdAt) { this.createdAt = createdAt; } public void setUpdatedAt(Date updatedAt) { this.updatedAt = updatedAt; } public void setUpdatedAtDis(String updatedAtDis) { this.updatedAtDis = updatedAtDis; } public void setCreatedAtDis(String createdAtDis) { this.createdAtDis = createdAtDis; } public boolean equals(Object o) { if (o == this) return true;  if (!(o instanceof RoomNumberResponse)) return false;  RoomNumberResponse other = (RoomNumberResponse)o; if (!other.canEqual(this)) return false;  if (getId() != other.getId()) return false;  Object this$name = getName(), other$name = other.getName(); if ((this$name == null) ? (other$name != null) : !this$name.equals(other$name)) return false;  Object this$number = getNumber(), other$number = other.getNumber(); if ((this$number == null) ? (other$number != null) : !this$number.equals(other$number)) return false;  if (getRoomId() != other.getRoomId()) return false;  Object this$note = getNote(), other$note = other.getNote(); if ((this$note == null) ? (other$note != null) : !this$note.equals(other$note)) return false;  Object this$allowUsers = getAllowUsers(), other$allowUsers = other.getAllowUsers(); if ((this$allowUsers == null) ? (other$allowUsers != null) : !this$allowUsers.equals(other$allowUsers)) return false;  Object this$status = getStatus(), other$status = other.getStatus(); if ((this$status == null) ? (other$status != null) : !this$status.equals(other$status)) return false;  Object this$createdAt = getCreatedAt(), other$createdAt = other.getCreatedAt(); if ((this$createdAt == null) ? (other$createdAt != null) : !this$createdAt.equals(other$createdAt)) return false;  Object this$updatedAt = getUpdatedAt(), other$updatedAt = other.getUpdatedAt(); if ((this$updatedAt == null) ? (other$updatedAt != null) : !this$updatedAt.equals(other$updatedAt)) return false;  Object this$updatedAtDis = getUpdatedAtDis(), other$updatedAtDis = other.getUpdatedAtDis(); if ((this$updatedAtDis == null) ? (other$updatedAtDis != null) : !this$updatedAtDis.equals(other$updatedAtDis)) return false;  Object this$createdAtDis = getCreatedAtDis(), other$createdAtDis = other.getCreatedAtDis(); return !((this$createdAtDis == null) ? (other$createdAtDis != null) : !this$createdAtDis.equals(other$createdAtDis)); } protected boolean canEqual(Object other) { return other instanceof RoomNumberResponse; } public int hashCode() { int PRIME = 59; result = 1; result = result * 59 + getId(); Object $name = getName(); result = result * 59 + (($name == null) ? 43 : $name.hashCode()); Object $number = getNumber(); result = result * 59 + (($number == null) ? 43 : $number.hashCode()); result = result * 59 + getRoomId(); Object $note = getNote(); result = result * 59 + (($note == null) ? 43 : $note.hashCode()); Object $allowUsers = getAllowUsers(); result = result * 59 + (($allowUsers == null) ? 43 : $allowUsers.hashCode()); Object $status = getStatus(); result = result * 59 + (($status == null) ? 43 : $status.hashCode()); Object $createdAt = getCreatedAt(); result = result * 59 + (($createdAt == null) ? 43 : $createdAt.hashCode()); Object $updatedAt = getUpdatedAt(); result = result * 59 + (($updatedAt == null) ? 43 : $updatedAt.hashCode()); Object $updatedAtDis = getUpdatedAtDis(); result = result * 59 + (($updatedAtDis == null) ? 43 : $updatedAtDis.hashCode()); Object $createdAtDis = getCreatedAtDis(); return result * 59 + (($createdAtDis == null) ? 43 : $createdAtDis.hashCode()); } public String toString() { return "RoomNumberResponse(id=" + getId() + ", name=" + getName() + ", number=" + getNumber() + ", roomId=" + getRoomId() + ", note=" + getNote() + ", allowUsers=" + getAllowUsers() + ", status=" + getStatus() + ", createdAt=" + getCreatedAt() + ", updatedAt=" + getUpdatedAt() + ", updatedAtDis=" + getUpdatedAtDis() + ", createdAtDis=" + getCreatedAtDis() + ")"; }
+/*    */    public RoomNumberResponse() {}
+/* 13 */   public RoomNumberResponse(int id, String name, String number, int roomId, String note, String allowUsers, Integer status, Date createdAt, Date updatedAt, String updatedAtDis, String createdAtDis) { this.id = id; this.name = name; this.number = number; this.roomId = roomId; this.note = note; this.allowUsers = allowUsers; this.status = status; this.createdAt = createdAt; this.updatedAt = updatedAt; this.updatedAtDis = updatedAtDis; this.createdAtDis = createdAtDis; }
+/* 14 */   public static RoomNumberResponseBuilder builder() { return new RoomNumberResponseBuilder(); } public static class RoomNumberResponseBuilder { private int id; private String name; private String number; private int roomId; private String note; public RoomNumberResponseBuilder id(int id) { this.id = id; return this; } private String allowUsers; private Integer status; private Date createdAt; private Date updatedAt; private String updatedAtDis; private String createdAtDis; public RoomNumberResponseBuilder name(String name) { this.name = name; return this; } public RoomNumberResponseBuilder number(String number) { this.number = number; return this; } public RoomNumberResponseBuilder roomId(int roomId) { this.roomId = roomId; return this; } public RoomNumberResponseBuilder note(String note) { this.note = note; return this; } public RoomNumberResponseBuilder allowUsers(String allowUsers) { this.allowUsers = allowUsers; return this; } public RoomNumberResponseBuilder status(Integer status) { this.status = status; return this; } public RoomNumberResponseBuilder createdAt(Date createdAt) { this.createdAt = createdAt; return this; } public RoomNumberResponseBuilder updatedAt(Date updatedAt) { this.updatedAt = updatedAt; return this; } public RoomNumberResponseBuilder updatedAtDis(String updatedAtDis) { this.updatedAtDis = updatedAtDis; return this; } public RoomNumberResponseBuilder createdAtDis(String createdAtDis) { this.createdAtDis = createdAtDis; return this; } public RoomNumberResponse build() { return new RoomNumberResponse(this.id, this.name, this.number, this.roomId, this.note, this.allowUsers, this.status, this.createdAt, this.updatedAt, this.updatedAtDis, this.createdAtDis); } public String toString() { return "RoomNumberResponse.RoomNumberResponseBuilder(id=" + this.id + ", name=" + this.name + ", number=" + this.number + ", roomId=" + this.roomId + ", note=" + this.note + ", allowUsers=" + this.allowUsers + ", status=" + this.status + ", createdAt=" + this.createdAt + ", updatedAt=" + this.updatedAt + ", updatedAtDis=" + this.updatedAtDis + ", createdAtDis=" + this.createdAtDis + ")"; }
+/*    */      }
+/* 16 */   public int getId() { return this.id; }
+/* 17 */   public String getName() { return this.name; }
+/* 18 */   public String getNumber() { return this.number; }
+/* 19 */   public int getRoomId() { return this.roomId; }
+/* 20 */   public String getNote() { return this.note; }
+/* 21 */   public String getAllowUsers() { return this.allowUsers; }
+/* 22 */   public Integer getStatus() { return this.status; }
+/* 23 */   public Date getCreatedAt() { return this.createdAt; } public Date getUpdatedAt() {
+/* 24 */     return this.updatedAt;
+/*    */   }
+/*    */ 
+/*    */ 
+/*    */   
+/*    */   public String getUpdatedAtDis() {
+/* 30 */     if (this.updatedAt == null) return ""; 
+/* 31 */     return ApiHelper.dateToString(this.updatedAt);
+/*    */   }
+/*    */   
+/*    */   public String getCreatedAtDis() {
+/* 35 */     if (this.createdAt == null) return ""; 
+/* 36 */     return ApiHelper.dateToString(this.createdAt);
+/*    */   } }
+
+
+/* Location:              C:\Users\Administrator\Desktop\!\nencer\app\Modules\Medic\Model\Room\RoomNumberResponse.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       1.1.3
+ */

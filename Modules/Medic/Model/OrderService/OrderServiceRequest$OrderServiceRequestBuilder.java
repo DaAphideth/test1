@@ -1,0 +1,23 @@
+/*    */ package nencer.app.Modules.Medic.Model.OrderService;
+/*    */ 
+/*    */ public class OrderServiceRequestBuilder {
+/*    */   private Integer serviceId;
+/*    */   private Integer id;
+/*    */   private Integer qty;
+/*    */   private String unit;
+/*    */   private Integer unitId;
+/*    */   private String status;
+/*    */   private Double price;
+/*    */   private Double totalAmount;
+/*    */   private Double insurancePay;
+/*    */   private Double payAmount;
+/*    */   
+/* 15 */   public OrderServiceRequestBuilder serviceId(Integer serviceId) { this.serviceId = serviceId; return this; } private String serviceCode; private String serviceName; private Integer serviceGroupId; private Integer serviceTypeId; private Integer serviceGroupCode; private Integer roomHandleId; private Integer roomSampleId; private Integer ticketId; private MedicServiceGroups serviceGroups; private MedicUnit medicUnit; private String serviceObject; public OrderServiceRequestBuilder id(Integer id) { this.id = id; return this; } public OrderServiceRequestBuilder qty(Integer qty) { this.qty = qty; return this; } public OrderServiceRequestBuilder unit(String unit) { this.unit = unit; return this; } public OrderServiceRequestBuilder unitId(Integer unitId) { this.unitId = unitId; return this; } public OrderServiceRequestBuilder status(String status) { this.status = status; return this; } public OrderServiceRequestBuilder price(Double price) { this.price = price; return this; } public OrderServiceRequestBuilder totalAmount(Double totalAmount) { this.totalAmount = totalAmount; return this; } public OrderServiceRequestBuilder insurancePay(Double insurancePay) { this.insurancePay = insurancePay; return this; } public OrderServiceRequestBuilder payAmount(Double payAmount) { this.payAmount = payAmount; return this; } public OrderServiceRequestBuilder serviceCode(String serviceCode) { this.serviceCode = serviceCode; return this; } public OrderServiceRequestBuilder serviceName(String serviceName) { this.serviceName = serviceName; return this; } public OrderServiceRequestBuilder serviceGroupId(Integer serviceGroupId) { this.serviceGroupId = serviceGroupId; return this; } public OrderServiceRequestBuilder serviceTypeId(Integer serviceTypeId) { this.serviceTypeId = serviceTypeId; return this; } public OrderServiceRequestBuilder serviceGroupCode(Integer serviceGroupCode) { this.serviceGroupCode = serviceGroupCode; return this; } public OrderServiceRequestBuilder roomHandleId(Integer roomHandleId) { this.roomHandleId = roomHandleId; return this; } public OrderServiceRequestBuilder roomSampleId(Integer roomSampleId) { this.roomSampleId = roomSampleId; return this; } public OrderServiceRequestBuilder ticketId(Integer ticketId) { this.ticketId = ticketId; return this; } public OrderServiceRequestBuilder serviceGroups(MedicServiceGroups serviceGroups) { this.serviceGroups = serviceGroups; return this; } public OrderServiceRequestBuilder medicUnit(MedicUnit medicUnit) { this.medicUnit = medicUnit; return this; } public OrderServiceRequestBuilder serviceObject(String serviceObject) { this.serviceObject = serviceObject; return this; } public OrderServiceRequest build() { return new OrderServiceRequest(this.serviceId, this.id, this.qty, this.unit, this.unitId, this.status, this.price, this.totalAmount, this.insurancePay, this.payAmount, this.serviceCode, this.serviceName, this.serviceGroupId, this.serviceTypeId, this.serviceGroupCode, this.roomHandleId, this.roomSampleId, this.ticketId, this.serviceGroups, this.medicUnit, this.serviceObject); } public String toString() { return "OrderServiceRequest.OrderServiceRequestBuilder(serviceId=" + this.serviceId + ", id=" + this.id + ", qty=" + this.qty + ", unit=" + this.unit + ", unitId=" + this.unitId + ", status=" + this.status + ", price=" + this.price + ", totalAmount=" + this.totalAmount + ", insurancePay=" + this.insurancePay + ", payAmount=" + this.payAmount + ", serviceCode=" + this.serviceCode + ", serviceName=" + this.serviceName + ", serviceGroupId=" + this.serviceGroupId + ", serviceTypeId=" + this.serviceTypeId + ", serviceGroupCode=" + this.serviceGroupCode + ", roomHandleId=" + this.roomHandleId + ", roomSampleId=" + this.roomSampleId + ", ticketId=" + this.ticketId + ", serviceGroups=" + this.serviceGroups + ", medicUnit=" + this.medicUnit + ", serviceObject=" + this.serviceObject + ")"; }
+/*    */ 
+/*    */ }
+
+
+/* Location:              C:\Users\Administrator\Desktop\!\nencer\app\Modules\Medic\Model\OrderService\OrderServiceRequest$OrderServiceRequestBuilder.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       1.1.3
+ */

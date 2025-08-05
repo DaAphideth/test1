@@ -1,0 +1,45 @@
+/*    */ package nencer.app.Modules.Medic.Model.Treatment;@JsonIgnoreProperties(ignoreUnknown = true)
+/*    */ public class ProductTicket { private String storehouseId; private String orderStatus; private String orderStatusName; private String ticketId; private String orderId; private String orderType; private String orderTypeName; private String customerId; private String customernName;
+/*    */   private String gender;
+/*    */   private String age;
+/*    */   private String createdAt;
+/*    */   private String orderDate;
+/*    */   private String departmentId;
+/*    */   private String departmentName;
+/*    */   private String ticketStatus;
+/*    */   private Integer totalRecord;
+/*    */   private String insuranceNumber;
+/*    */   private Integer benefitRate;
+/*    */   
+/* 14 */   public void setStorehouseId(String storehouseId) { this.storehouseId = storehouseId; } public void setOrderStatus(String orderStatus) { this.orderStatus = orderStatus; } public void setOrderStatusName(String orderStatusName) { this.orderStatusName = orderStatusName; } public void setTicketId(String ticketId) { this.ticketId = ticketId; } public void setOrderId(String orderId) { this.orderId = orderId; } public void setOrderType(String orderType) { this.orderType = orderType; } public void setOrderTypeName(String orderTypeName) { this.orderTypeName = orderTypeName; } public void setCustomerId(String customerId) { this.customerId = customerId; } public void setCustomernName(String customernName) { this.customernName = customernName; } public void setGender(String gender) { this.gender = gender; } public void setAge(String age) { this.age = age; } public void setCreatedAt(String createdAt) { this.createdAt = createdAt; } public void setOrderDate(String orderDate) { this.orderDate = orderDate; } public void setDepartmentId(String departmentId) { this.departmentId = departmentId; } public void setDepartmentName(String departmentName) { this.departmentName = departmentName; } public void setTicketStatus(String ticketStatus) { this.ticketStatus = ticketStatus; } public void setTotalRecord(Integer totalRecord) { this.totalRecord = totalRecord; } public void setInsuranceNumber(String insuranceNumber) { this.insuranceNumber = insuranceNumber; } public void setBenefitRate(Integer benefitRate) { this.benefitRate = benefitRate; } public ProductTicket(String storehouseId, String orderStatus, String orderStatusName, String ticketId, String orderId, String orderType, String orderTypeName, String customerId, String customernName, String gender, String age, String createdAt, String orderDate, String departmentId, String departmentName, String ticketStatus, Integer totalRecord, String insuranceNumber, Integer benefitRate) {
+/* 15 */     this.storehouseId = storehouseId; this.orderStatus = orderStatus; this.orderStatusName = orderStatusName; this.ticketId = ticketId; this.orderId = orderId; this.orderType = orderType; this.orderTypeName = orderTypeName; this.customerId = customerId; this.customernName = customernName; this.gender = gender; this.age = age; this.createdAt = createdAt; this.orderDate = orderDate; this.departmentId = departmentId; this.departmentName = departmentName; this.ticketStatus = ticketStatus; this.totalRecord = totalRecord; this.insuranceNumber = insuranceNumber; this.benefitRate = benefitRate;
+/*    */   } public ProductTicket() {}
+/* 17 */   public static ProductTicketBuilder builder() { return new ProductTicketBuilder(); } public static class ProductTicketBuilder { private String storehouseId; private String orderStatus; private String orderStatusName; private String ticketId; private String orderId; private String orderType; private String orderTypeName; private String customerId; private String customernName; public ProductTicketBuilder storehouseId(String storehouseId) { this.storehouseId = storehouseId; return this; } private String gender; private String age; private String createdAt; private String orderDate; private String departmentId; private String departmentName; private String ticketStatus; private Integer totalRecord; private String insuranceNumber; private Integer benefitRate; public ProductTicketBuilder orderStatus(String orderStatus) { this.orderStatus = orderStatus; return this; } public ProductTicketBuilder orderStatusName(String orderStatusName) { this.orderStatusName = orderStatusName; return this; } public ProductTicketBuilder ticketId(String ticketId) { this.ticketId = ticketId; return this; } public ProductTicketBuilder orderId(String orderId) { this.orderId = orderId; return this; } public ProductTicketBuilder orderType(String orderType) { this.orderType = orderType; return this; } public ProductTicketBuilder orderTypeName(String orderTypeName) { this.orderTypeName = orderTypeName; return this; } public ProductTicketBuilder customerId(String customerId) { this.customerId = customerId; return this; } public ProductTicketBuilder customernName(String customernName) { this.customernName = customernName; return this; } public ProductTicketBuilder gender(String gender) { this.gender = gender; return this; } public ProductTicketBuilder age(String age) { this.age = age; return this; } public ProductTicketBuilder createdAt(String createdAt) { this.createdAt = createdAt; return this; } public ProductTicketBuilder orderDate(String orderDate) { this.orderDate = orderDate; return this; } public ProductTicketBuilder departmentId(String departmentId) { this.departmentId = departmentId; return this; } public ProductTicketBuilder departmentName(String departmentName) { this.departmentName = departmentName; return this; } public ProductTicketBuilder ticketStatus(String ticketStatus) { this.ticketStatus = ticketStatus; return this; } public ProductTicketBuilder totalRecord(Integer totalRecord) { this.totalRecord = totalRecord; return this; } public ProductTicketBuilder insuranceNumber(String insuranceNumber) { this.insuranceNumber = insuranceNumber; return this; } public ProductTicketBuilder benefitRate(Integer benefitRate) { this.benefitRate = benefitRate; return this; } public ProductTicket build() { return new ProductTicket(this.storehouseId, this.orderStatus, this.orderStatusName, this.ticketId, this.orderId, this.orderType, this.orderTypeName, this.customerId, this.customernName, this.gender, this.age, this.createdAt, this.orderDate, this.departmentId, this.departmentName, this.ticketStatus, this.totalRecord, this.insuranceNumber, this.benefitRate); } public String toString() { return "ProductTicket.ProductTicketBuilder(storehouseId=" + this.storehouseId + ", orderStatus=" + this.orderStatus + ", orderStatusName=" + this.orderStatusName + ", ticketId=" + this.ticketId + ", orderId=" + this.orderId + ", orderType=" + this.orderType + ", orderTypeName=" + this.orderTypeName + ", customerId=" + this.customerId + ", customernName=" + this.customernName + ", gender=" + this.gender + ", age=" + this.age + ", createdAt=" + this.createdAt + ", orderDate=" + this.orderDate + ", departmentId=" + this.departmentId + ", departmentName=" + this.departmentName + ", ticketStatus=" + this.ticketStatus + ", totalRecord=" + this.totalRecord + ", insuranceNumber=" + this.insuranceNumber + ", benefitRate=" + this.benefitRate + ")"; }
+/*    */      }
+/* 19 */   public String getStorehouseId() { return this.storehouseId; }
+/* 20 */   public String getOrderStatus() { return this.orderStatus; }
+/* 21 */   public String getOrderStatusName() { return this.orderStatusName; }
+/* 22 */   public String getTicketId() { return this.ticketId; }
+/* 23 */   public String getOrderId() { return this.orderId; }
+/* 24 */   public String getOrderType() { return this.orderType; }
+/* 25 */   public String getOrderTypeName() { return this.orderTypeName; }
+/* 26 */   public String getCustomerId() { return this.customerId; }
+/* 27 */   public String getCustomernName() { return this.customernName; }
+/* 28 */   public String getGender() { return this.gender; }
+/* 29 */   public String getAge() { return this.age; }
+/* 30 */   public String getCreatedAt() { return this.createdAt; }
+/* 31 */   public String getOrderDate() { return this.orderDate; }
+/* 32 */   public String getDepartmentId() { return this.departmentId; }
+/* 33 */   public String getDepartmentName() { return this.departmentName; }
+/* 34 */   public String getTicketStatus() { return this.ticketStatus; } public Integer getTotalRecord() {
+/* 35 */     return this.totalRecord;
+/*    */   }
+/* 37 */   public String getInsuranceNumber() { return this.insuranceNumber; } public Integer getBenefitRate() {
+/* 38 */     return this.benefitRate;
+/*    */   } }
+
+
+/* Location:              C:\Users\Administrator\Desktop\!\nencer\app\Modules\Medic\Model\Treatment\ProductTicket.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       1.1.3
+ */

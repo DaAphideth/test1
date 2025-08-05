@@ -1,0 +1,24 @@
+/*    */ package nencer.app.Modules.Medic.Model.EgwBHYT;
+/*    */ 
+/*    */ class APIKey {
+/*    */   private String access_token;
+/*    */   private String id_token;
+/*    */   private String token_type;
+/*    */   private String username;
+/*    */   private String expires_in;
+/*    */   
+/* 10 */   public void setAccess_token(String access_token) { this.access_token = access_token; } public void setId_token(String id_token) { this.id_token = id_token; } public void setToken_type(String token_type) { this.token_type = token_type; } public void setUsername(String username) { this.username = username; } public void setExpires_in(String expires_in) { this.expires_in = expires_in; } public boolean equals(Object o) { if (o == this) return true;  if (!(o instanceof APIKey)) return false;  APIKey other = (APIKey)o; if (!other.canEqual(this)) return false;  Object this$access_token = getAccess_token(), other$access_token = other.getAccess_token(); if ((this$access_token == null) ? (other$access_token != null) : !this$access_token.equals(other$access_token)) return false;  Object this$id_token = getId_token(), other$id_token = other.getId_token(); if ((this$id_token == null) ? (other$id_token != null) : !this$id_token.equals(other$id_token)) return false;  Object this$token_type = getToken_type(), other$token_type = other.getToken_type(); if ((this$token_type == null) ? (other$token_type != null) : !this$token_type.equals(other$token_type)) return false;  Object this$username = getUsername(), other$username = other.getUsername(); if ((this$username == null) ? (other$username != null) : !this$username.equals(other$username)) return false;  Object this$expires_in = getExpires_in(), other$expires_in = other.getExpires_in(); return !((this$expires_in == null) ? (other$expires_in != null) : !this$expires_in.equals(other$expires_in)); } protected boolean canEqual(Object other) { return other instanceof APIKey; } public int hashCode() { int PRIME = 59; result = 1; Object $access_token = getAccess_token(); result = result * 59 + (($access_token == null) ? 43 : $access_token.hashCode()); Object $id_token = getId_token(); result = result * 59 + (($id_token == null) ? 43 : $id_token.hashCode()); Object $token_type = getToken_type(); result = result * 59 + (($token_type == null) ? 43 : $token_type.hashCode()); Object $username = getUsername(); result = result * 59 + (($username == null) ? 43 : $username.hashCode()); Object $expires_in = getExpires_in(); return result * 59 + (($expires_in == null) ? 43 : $expires_in.hashCode()); } public String toString() { return "TakeToken.APIKey(access_token=" + getAccess_token() + ", id_token=" + getId_token() + ", token_type=" + getToken_type() + ", username=" + getUsername() + ", expires_in=" + getExpires_in() + ")"; }
+/*    */   
+/* 12 */   public String getAccess_token() { return this.access_token; }
+/* 13 */   public String getId_token() { return this.id_token; }
+/* 14 */   public String getToken_type() { return this.token_type; }
+/* 15 */   public String getUsername() { return this.username; } public String getExpires_in() {
+/* 16 */     return this.expires_in;
+/*    */   }
+/*    */ }
+
+
+/* Location:              C:\Users\Administrator\Desktop\!\nencer\app\Modules\Medic\Model\EgwBHYT\TakeToken$APIKey.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       1.1.3
+ */

@@ -1,0 +1,26 @@
+/*    */ package nencer.app.Modules.Storehouse.Entity;
+/*    */ 
+/*    */ 
+/*    */ public class MedicStorehouseInvenBuilder {
+/*    */   private Integer invenId;
+/*    */   private Integer storehouseId;
+/*    */   private Integer productId;
+/*    */   private Double priceInput;
+/*    */   private Double price;
+/*    */   private Double priceIns;
+/*    */   private Double priceFee;
+/*    */   private Double priceHospital;
+/*    */   private Double priceRequest;
+/*    */   private Double priceSelling;
+/*    */   private String batchNumber;
+/*    */   private Double vat;
+/*    */   
+/* 18 */   public MedicStorehouseInvenBuilder invenId(Integer invenId) { this.invenId = invenId; return this; } private String bidNumber; private String bidGroup; private String bidPackage; private String bidYear; private String expirationDateFe; private Date expirationDate; private Date productionDate; private Date createdDate; private Date updatedDate; private Integer qty; private Integer qtyLock; private Integer orderDetailId; public MedicStorehouseInvenBuilder storehouseId(Integer storehouseId) { this.storehouseId = storehouseId; return this; } public MedicStorehouseInvenBuilder productId(Integer productId) { this.productId = productId; return this; } public MedicStorehouseInvenBuilder priceInput(Double priceInput) { this.priceInput = priceInput; return this; } public MedicStorehouseInvenBuilder price(Double price) { this.price = price; return this; } public MedicStorehouseInvenBuilder priceIns(Double priceIns) { this.priceIns = priceIns; return this; } public MedicStorehouseInvenBuilder priceFee(Double priceFee) { this.priceFee = priceFee; return this; } public MedicStorehouseInvenBuilder priceHospital(Double priceHospital) { this.priceHospital = priceHospital; return this; } public MedicStorehouseInvenBuilder priceRequest(Double priceRequest) { this.priceRequest = priceRequest; return this; } public MedicStorehouseInvenBuilder priceSelling(Double priceSelling) { this.priceSelling = priceSelling; return this; } public MedicStorehouseInvenBuilder batchNumber(String batchNumber) { this.batchNumber = batchNumber; return this; } public MedicStorehouseInvenBuilder vat(Double vat) { this.vat = vat; return this; } public MedicStorehouseInvenBuilder bidNumber(String bidNumber) { this.bidNumber = bidNumber; return this; } public MedicStorehouseInvenBuilder bidGroup(String bidGroup) { this.bidGroup = bidGroup; return this; } public MedicStorehouseInvenBuilder bidPackage(String bidPackage) { this.bidPackage = bidPackage; return this; } public MedicStorehouseInvenBuilder bidYear(String bidYear) { this.bidYear = bidYear; return this; } public MedicStorehouseInvenBuilder expirationDateFe(String expirationDateFe) { this.expirationDateFe = expirationDateFe; return this; } public MedicStorehouseInvenBuilder expirationDate(Date expirationDate) { this.expirationDate = expirationDate; return this; } public MedicStorehouseInvenBuilder productionDate(Date productionDate) { this.productionDate = productionDate; return this; } public MedicStorehouseInvenBuilder createdDate(Date createdDate) { this.createdDate = createdDate; return this; } public MedicStorehouseInvenBuilder updatedDate(Date updatedDate) { this.updatedDate = updatedDate; return this; } public MedicStorehouseInvenBuilder qty(Integer qty) { this.qty = qty; return this; } public MedicStorehouseInvenBuilder qtyLock(Integer qtyLock) { this.qtyLock = qtyLock; return this; } public MedicStorehouseInvenBuilder orderDetailId(Integer orderDetailId) { this.orderDetailId = orderDetailId; return this; } public MedicStorehouseInven build() { return new MedicStorehouseInven(this.invenId, this.storehouseId, this.productId, this.priceInput, this.price, this.priceIns, this.priceFee, this.priceHospital, this.priceRequest, this.priceSelling, this.batchNumber, this.vat, this.bidNumber, this.bidGroup, this.bidPackage, this.bidYear, this.expirationDateFe, this.expirationDate, this.productionDate, this.createdDate, this.updatedDate, this.qty, this.qtyLock, this.orderDetailId); } public String toString() { return "MedicStorehouseInven.MedicStorehouseInvenBuilder(invenId=" + this.invenId + ", storehouseId=" + this.storehouseId + ", productId=" + this.productId + ", priceInput=" + this.priceInput + ", price=" + this.price + ", priceIns=" + this.priceIns + ", priceFee=" + this.priceFee + ", priceHospital=" + this.priceHospital + ", priceRequest=" + this.priceRequest + ", priceSelling=" + this.priceSelling + ", batchNumber=" + this.batchNumber + ", vat=" + this.vat + ", bidNumber=" + this.bidNumber + ", bidGroup=" + this.bidGroup + ", bidPackage=" + this.bidPackage + ", bidYear=" + this.bidYear + ", expirationDateFe=" + this.expirationDateFe + ", expirationDate=" + this.expirationDate + ", productionDate=" + this.productionDate + ", createdDate=" + this.createdDate + ", updatedDate=" + this.updatedDate + ", qty=" + this.qty + ", qtyLock=" + this.qtyLock + ", orderDetailId=" + this.orderDetailId + ")"; }
+/*    */ 
+/*    */ }
+
+
+/* Location:              C:\Users\Administrator\Desktop\!\nencer\app\Modules\Storehouse\Entity\MedicStorehouseInven$MedicStorehouseInvenBuilder.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       1.1.3
+ */

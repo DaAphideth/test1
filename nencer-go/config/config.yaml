@@ -1,0 +1,10 @@
+redis:
+  host: localhost
+  port: 6379
+
+db:
+  host: localhost
+  port: 3306
+  user: root
+  pass: ""
+  name: nencer 
